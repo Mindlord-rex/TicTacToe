@@ -17,7 +17,18 @@ function handleResultValidation() {
 
 }
 function handleCellClick() {
+    const clickedCell = clickedCellEvent.target;
 
+    const clickedCellIndex = parseInt(
+        clickedCell.getAttribute('data-cell-index')
+    );
+
+    if(gameState[clickedCellIndex] !== "" || !gameActive){
+        return;
+    }
+
+    handleCellPlayer(clickedCell, clickedCellIndex);
+    handleResultValidation();
 }
 function handleRestartGame() {
 
