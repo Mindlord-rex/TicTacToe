@@ -7,8 +7,9 @@ const drawMessage = () => 'Game ended in a draw!';
 const currentPlayerTurn = () => 'It`s ${currentPlayer}`s turn';
 
 statusDisplay.innerHTML = currentPlayerTurn();
-function handleCellPlayer() {
-
+function handleCellPlayer(clickedCell, clickedCellIndex) {
+    gameState[clickedCellIndex] = currentPlayer;
+    clickedCell.innerHTML = currentPlayer;
 }
 function handlePlayerChange() {
 
