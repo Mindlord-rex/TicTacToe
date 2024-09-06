@@ -49,7 +49,7 @@ function handleResultValidation() {
     }
 }
 
-function handleCellClick() {
+function handleCellClick(clickedCellEvent) {
     const clickedCell = clickedCellEvent.target;
 
     const clickedCellIndex = parseInt(
