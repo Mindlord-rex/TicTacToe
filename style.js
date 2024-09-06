@@ -47,6 +47,15 @@ function handleResultValidation() {
         gameActive = false;
         return;
     }
+
+    let roundDraw = !gameState.includes("");
+    if(roundDraw){
+        statusDisplay.innerHTML = drawMessage();
+        gameActive = false;
+        return;
+    }
+    
+    handlePlayerChange();
 }
 
 function handleCellClick(clickedCellEvent) {
