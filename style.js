@@ -12,7 +12,8 @@ function handleCellPlayer(clickedCell, clickedCellIndex) {
     clickedCell.innerHTML = currentPlayer;
 }
 function handlePlayerChange() {
-
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    statusDisplay.innerHTML = currentPlayerTurn();
 }
 
 const winningConditions = [
